@@ -68,3 +68,18 @@ footer a { color: var(--muted); }
   .hero h1 { font-size: 44px; }
   .cards.three { grid-template-columns: repeat(3, 1fr); }
 }
+
+/* 약관·개인정보 처리방침 문서 */
+.legal .draft { margin-top: 14px; padding: 14px 16px; border-radius: 14px; background: #fff1f1; color: var(--ink); font-size: 15px; }
+.toc { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+.toc a { display: inline-flex; align-items: center; height: 40px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line); text-decoration: none; font-weight: 600; font-size: 14px; }
+.legal section.block { scroll-margin-top: 16px; }
+.legal h3 { font-size: 16px; font-weight: 800; margin: 26px 0 8px; letter-spacing: -0.02em; }
+.legal p, .legal li { font-size: 15px; color: #333; }
+.legal ol, .legal ul { padding-left: 20px; display: grid; gap: 6px; }
+.legal .note { color: var(--accent); font-size: 13px; font-weight: 600; }
+.rows { display: grid; gap: 8px; margin: 8px 0; }
+.row { background: var(--mist); border-radius: 14px; padding: 14px 16px; display: grid; gap: 2px; font-size: 15px; }
+.row b { font-size: 15px; }
+.row span { color: #333; }
+.row em { font-style: normal; color: var(--muted); font-size: 14px; }

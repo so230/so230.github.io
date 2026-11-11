@@ -5,6 +5,8 @@
 ## 구조 (폴더 = 주소)
 - `index.html` → https://so230.github.io/ (서비스 목록)
 - `moapack/index.html` → https://so230.github.io/moapack/ (모아팩 소개)
+- `moapack/legal/index.html` → https://so230.github.io/moapack/legal/ (이용약관 + 개인정보 처리방침, **초안**)
+  - `moapack/terms/` → 이용약관 부분으로 바로 이동, `moapack/privacy/` → 개인정보 처리방침 부분으로 바로 이동 (앱스토어 심사용 주소)
 - `assets/style.css` → 공통 디자인 (흰색·검정 + 포인트 빨강)
 
 새 페이지는 폴더를 만들고 그 안에 `index.html`을 두면 `https://so230.github.io/폴더이름/`으로 열린다.
