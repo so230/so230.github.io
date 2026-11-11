@@ -1,0 +1,70 @@
+/* 공통 디자인 — 모아팩 서비스와 같은 흰색·검정 + 포인트 빨강 */
+:root {
+  --ink: #111111;
+  --paper: #ffffff;
+  --mist: #f3f3f4;
+  --line: #e6e6e8;
+  --muted: #6b6b70;
+  --faint: #9a9aa0;
+  --accent: #e3262c;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+a { color: inherit; }
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 20px; }
+
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
+.logo { font-size: 20px; font-weight: 800; letter-spacing: -0.03em; text-decoration: none; }
+.logo .dot { color: var(--accent); }
+.badge { display: inline-block; font-size: 12px; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--mist); color: var(--muted); }
+.badge.accent { background: var(--accent); color: var(--paper); }
+
+.hero { padding: 56px 0 40px; }
+.hero h1 { font-size: 34px; line-height: 1.3; font-weight: 800; letter-spacing: -0.04em; }
+.hero h1 em { font-style: normal; color: var(--accent); }
+.hero p { margin-top: 14px; font-size: 17px; color: var(--muted); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; height: 54px; padding: 0 28px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; background: var(--ink); color: var(--paper); }
+.btn.line { background: var(--paper); color: var(--ink); border: 1.5px solid var(--ink); }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+
+section.block { padding: 36px 0; border-top: 8px solid var(--mist); }
+section.block h2 { font-size: 22px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 18px; }
+.cards { display: grid; gap: 12px; }
+.card { background: var(--mist); border-radius: 18px; padding: 20px; }
+.card h3 { font-size: 18px; font-weight: 800; letter-spacing: -0.02em; }
+.card h3 small { font-size: 13px; font-weight: 600; color: var(--accent); margin-left: 6px; }
+.card p { margin-top: 6px; color: var(--muted); font-size: 15px; }
+
+ol.steps { list-style: none; counter-reset: s; display: grid; gap: 14px; }
+ol.steps li { counter-increment: s; display: flex; gap: 14px; align-items: flex-start; }
+ol.steps li::before { content: counter(s); flex: none; width: 30px; height: 30px; border-radius: 999px; background: var(--ink); color: var(--paper); font-weight: 800; display: grid; place-items: center; font-size: 14px; }
+ol.steps b { display: block; }
+ol.steps span { color: var(--muted); font-size: 15px; }
+
+ul.list { list-style: none; display: grid; gap: 10px; }
+ul.list li { padding-left: 18px; position: relative; color: var(--muted); }
+ul.list li::before { content: ""; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 999px; background: var(--accent); }
+ul.list b { color: var(--ink); }
+
+.services { display: grid; gap: 12px; padding: 40px 0 56px; }
+.service { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 22px; border: 1px solid var(--line); border-radius: 18px; text-decoration: none; }
+.service b { font-size: 19px; letter-spacing: -0.02em; }
+.service span { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+.service .go { font-size: 22px; color: var(--faint); }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--faint); font-size: 13px; }
+footer a { color: var(--muted); }
+
+@media (min-width: 640px) {
+  .hero h1 { font-size: 44px; }
+  .cards.three { grid-template-columns: repeat(3, 1fr); }
+}
